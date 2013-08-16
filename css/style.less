@@ -38,6 +38,9 @@
 @facebook: #3a589b;
 @linkedin: #007ab9;
 @red: #b72720;
+@twitter: #1ab2e8;
+@google: #d03f2c;
+@youtube: #cc292c;
 
 .blue_rgba(@alfa){
 	background-color: rgba(19,32,65, @alfa);
@@ -62,6 +65,9 @@ body{
 
 a, a:visited{
 	text-decoration: none;
+}
+
+header a, header a:visited{
 	color: @textgray;
 }
 
@@ -70,7 +76,8 @@ header{
 	top: 0px;
 	background-color: #FFF;
 	width:100%;
-	.box-shadow(24px, 12px, rgba(0,0,0,0.3));
+	/*.box-shadow(24px, 12px, rgba(0,0,0,0.3));*/
+	border-bottom: 1px solid #d5d5d5;
 	padding: 0px;
 	margin: 0px;
 	text-transform: uppercase;
@@ -82,6 +89,7 @@ header #header-content{
 	width:100%;
 	margin: auto;
 	padding: 14px 0;
+	position: relative;
 
 }
 
@@ -116,11 +124,16 @@ header #header-content .button-desc span{
 	margin-left: 10px;
 }
 
-nav{
+.logo{
+	width: 160px;
+	margin-top: 2px;
+}
+
+header nav{
 	float: left;
 }
 
-nav .group{
+header nav .group{
 	display: inline-block;
 	font-size: 11px;
 	line-height: 16px;
@@ -128,14 +141,46 @@ nav .group{
 	margin-left: 10px;
 }
 
-nav .group a{
+header nav .group a{
 	display: inline-block;
 }
 
 .auth{
 	float:right;
 	font-size: 13px;
-	margin-top: 3px;
+	margin-top: 0px;
+}
+
+.login-trigger{
+	float: left;
+	margin-top:17px;
+	margin-right: 3px;
+	padding-bottom: 13px 
+}
+
+.login_box{
+	position: absolute;
+	right:0px;
+	top:55px;
+	width: 200px;
+	.box-sizing-padding(10px);
+	.box-shadow;
+	background-color:#FFF; 
+	text-transform: none;
+	display: none;
+}
+
+.login_box::after{
+	content: "";
+	width: 0px;
+	height: 0px;
+	border-style: solid;
+	border-width: 0 5px 10px 5px;
+	border-color: transparent transparent #FFFFFF transparent;
+	position: absolute;
+	top:-10px;
+	right:85px;
+
 }
 
 .slicer_small{
@@ -144,76 +189,11 @@ nav .group a{
 	display: inline;
 }
 
-
-
-header.compact{
-
-}
-
-header.compact #header-content{
-
-}
-
-header.compact #header-content .logo{
-	width:120px;
-}
-
-header.compact .slicer img{
-	height:30px;
-}
-
-header.compact #header-content a.top-buttons{
-	float: left;
-	margin-top:0px;
-}
-
-header.compact #header-content .top-buttons img{
-	float: left;
-	width: 30px;
-
-}
-
-header.compact #header-content .button-desc{
-	float: left;
-	font-size: 9px;
-	line-height: 9px;
-	margin-top:6px;
-}
-
-header.compact #header-content .button-desc span{
-	font-size: 14px; 
-	line-height: 14px;
-}
-
-header.compact nav .group{
-	display: inline-block;
-	font-size: 9px;
-	line-height: 12px;
-	margin-top: 5px;
-	margin-left: 10px;
-}
-
-header.compact .auth{
-	float:right;
-	font-size: 11px;
-	margin-top: 0px;
-}
-
-header.compact .slicer_small{
-	position: relative;
-	top:6px;
-	display: inline;
-	height: 20px;
-}
-
-
-
-
 .rotator{
 	width: 100%;
 	height:300px;
 	position: relative;
-	margin-top: 77px;
+	margin-top: 73px;
 	overflow: hidden;
 
 }
@@ -313,7 +293,7 @@ header.compact .slicer_small{
 	float: right;
 }
 
-.hr{
+.hr-inline{
 	height: 1px;
 	background-color: #FFF;
 	width:48%;
@@ -325,7 +305,7 @@ header.compact .slicer_small{
 
 .box_content{
 	.box-shadow(15px,-1px,rgba(0,0,0,0.3));
-	border: 1px solid @blue;
+	border: 1px solid #e4e4e4;
 	border-top:0; 
 	padding: 20px 10%;
 	.box-sizing();
@@ -335,7 +315,7 @@ header.compact .slicer_small{
 	font-size: 14px;
 }
 
-.green_button{
+.green_button, .green_button:visited{
 	background-color: @green;
 	.box-shadow;
 	display: block;
@@ -537,7 +517,7 @@ label.micro{
 	width: 28%;
 }
 
-.social-button-small{
+.social-button-small, .social-button-small:visited{
 	width: 100%;
 	margin-top: 10px;
 	color: #FFFFFF;
@@ -557,7 +537,7 @@ label.micro{
 	display: block;
 }
 
-.social-button{
+.social-button, .social-button:visited{
 	width: 100%;
 	margin-top: 8px;
 	color: #FFFFFF;
@@ -590,6 +570,7 @@ label.micro{
 
 main{
 	background-color:#f1efef;
+	padding-bottom: 10px;
 }
 
 main a, main a:visited{
@@ -632,15 +613,24 @@ main a, main a:visited{
 }
 
 .popular{
-	width:1120px;
+	max-width:1010px;
+	width:100%;
 	margin:auto;
+	margin-bottom: 10px;
+	position: relative;
 }
 
 .popular_nav{
+	position: absolute;
 	cursor:pointer;
-	font-size: 70px;
-	width:80px;
+	font-size: 26px;
+	width: 2.5%;
+	right:0%;
 	margin-top:164px;
+}
+
+.popular_nav#prev{
+	left:0%;
 }
 
 .popular_pitch{
@@ -648,9 +638,9 @@ main a, main a:visited{
 	border: 1px solid #e4e4e4;
 	position: relative;
 	float:left;
-	width:218px;
+	width:23%;
 	.box-shadow;
-	margin-right: 26.5px;
+	margin-right: 2.3%;
 	margin-bottom: 30px;
 }
 
@@ -659,13 +649,15 @@ main a, main a:visited{
 }
 
 .popular_wrapper{
-	width: 960px;
+	max-width: 960px;
+	width:95%;
+	margin-left: 2.5%;
 	margin-top: 0;
 	float: left;
 }
 
 .populars_home{
-	width:960px;
+	width:100%;
 	position: relative;
 	top:0px;
 	height: 420px;
@@ -761,16 +753,179 @@ main a, main a:visited{
 	background-image: url("../gfx/badge.png");
 }
 
+footer{
+	width: 100%;
+	background: @blue;
+	.box-shadow-inset;
+	.box-sizing;
+	padding: 20px;
+	overflow: hidden;
+}
+
+footer .row{
+	float:left;
+	margin-right: 10px;
+	position: relative;
+	z-index: 1;
+}
+
+footer .row .heading{
+	font-family: "Lato";
+	font-size: 16px;
+	text-transform: uppercase;
+	color:@textgray;
+	letter-spacing: -1px;
+	margin-bottom: 5px;
+}
+
+.footer-content{
+	max-width:960px;
+	width:100%;
+	margin:auto;
+	color:#FFF;
+	position: relative;
+}
+
+.footer-content::after{
+	content: "";
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	left:-200px;
+	top: -100px;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%, rgba(255,255,255,0.01) 58%, rgba(255,255,255,0) 59%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.33)), color-stop(58%,rgba(255,255,255,0.01)), color-stop(59%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	opacity: 0.3;
+}
+
+.footer-content::before{
+	content: "";
+	width: 500px;
+	height: 500px;
+	position: absolute;
+	right:-200px;
+	bottom: -200px;
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%, rgba(255,255,255,0.01) 58%, rgba(255,255,255,0) 59%); /* FF3.6+ */
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,0.33)), color-stop(58%,rgba(255,255,255,0.01)), color-stop(59%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* Chrome10+,Safari5.1+ */
+	background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* Opera 12+ */
+	background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* IE10+ */
+	background: radial-gradient(ellipse at center,  rgba(255,255,255,0.33) 0%,rgba(255,255,255,0.01) 58%,rgba(255,255,255,0) 59%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#54ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+	opacity: 0.2;
+}
+
+footer ul{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-size: 10px;
+	line-height: 15px;
+}
+
+footer a, footer a:visited{
+	color: #e5e5e5;
+}
+
+footer .row-right{
+	float: right;
+	text-align:right;
+	position: relative;
+	z-index: 1;
+}
+
+footer .row-right .heading{
+	font-family: "Lato";
+	font-size: 24px;
+	text-transform: uppercase;
+	color:@textgray;
+	letter-spacing: -1px;
+	margin-bottom: 5px;
+}
+
+.social_icon{
+	display: inline-block;
+	background: #2a2a2a;
+	margin-right:3px;
+	margin-left:3px;
+	width:32px;
+	height: 34px;
+	position: relative;
+}
+
+.social_icon div{
+	width:100%;
+	height: 2px;
+	position: absolute;
+	top:0px;
+}
+.social_icon img{
+	margin-top: 2px;
+	position: relative;
+	z-index: 2;
+}
+
+footer .blog_entry{
+	font-size:12px; 
+	width: 200px;
+}
+
+.legal{
+	max-width: 960px;
+	width:100%;
+	font-size: 10px;
+	text-align: justify;
+	margin: auto;
+	margin-top:10px; 
+}
+
+.hr{
+	width:100%;
+	height: 1px;
+	background-color:#d5d5d5;
+	margin: 10px 0;
+}
+
+.legal nav{
+	float: right;
+}
+
+#fb{background-color:@facebook;}
+#li{background-color:@linkedin;}
+#tw{background-color:@twitter;}
+#gp{background-color:@google;}
+#yt{background-color:@youtube;}
+
 .smaller{font-size: 11px;}
 .micro{font-size: 10px;}
 .light{font-weight: 300;}
-.green{color: @green;}
-.blue{color: @blue;}
-.purple{color: @purple;}
+.green, .green:visited{color: @green;}
+.blue,.blue:visited{color: @blue;}
+.purple,.purple:visited{color: @purple;}
 .right{float: right;}
 .left{float: left;}
 .no-float{float: none !important;}
 .center{text-align: center;}
 .align_left{text-align: left;}
 .align_right{text-align: right;}
+.no-margin{margin:0px !important;}
+.vertical-separator{margin: 10px 0;}
 
+
+/* -----------Tablet View----------- */ 
+@media only screen and (max-width : 960px) and (min-width : 500px)   {
+
+
+
+}
+
+@media screen and (max-width: 499px){
+
+}

@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 	<title>BTTF</title>
 	<!-- FONTS -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
@@ -15,6 +16,7 @@
 	<script type="text/javascript" src="js/jquery.transit.min.js"></script>
 	<script type="text/javascript" src="js/jquery.fittext.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.10.3.custom.min.js"></script>
+	<script type="text/javascript" src="js/js.js"></script>
 
 
 </head>
@@ -56,7 +58,24 @@
 				</div>
 			</nav>
 			<div class="auth">
-				<a href="#">SIGN IN</a>
+				<div class="login-trigger"><a href="#">SIGN IN</a>
+					<div class="login_box">
+						<input type="text" placeholder="E-MAIL"  style="margin-top:0;"/>
+						<input type="password" placeholder="PASSWORD" />
+
+						<input type="submit" value="LOGIN" class="right"/>
+						<div style="margin-top:10px; width:120px;">
+								<input type="checkbox" class="left" style="margin-top:0;" /> 
+								<label class="micro" style="top:0px;">Remember me</label>
+								<div class="cl"></div>
+								<a href="#" class="micro blue" style="position: relative; top:-13px; left:5px;">Forgot password?</a>
+						</div>
+						<div class="cl"></div>
+						<div class="section vertical-separator"><span>&nbsp;or use social account&nbsp;</span></div>
+						<a href="#" class="social-button-small facebook"><img src="gfx/facebook_icon.png" /><span style="font-size:11px;">LOGIN WITH FACEBOOK</span></a>
+						<a href="#" class="social-button-small linkedin"><img src="gfx/linkedin_icon.png" /><span style="font-size:11px;">LOGIN WITH LINKEDIN</span></a>
+					</div>
+				</div>
 				<img src="gfx/slicer_small.png" class="slicer_small no-float" />
 				<a class="green" href="#">JOIN US</a>
 			</div>
@@ -84,7 +103,7 @@
 					<div class="box_header">
 						<span class="epidemia_header">
 							BULID YOUR PORTFOLIO<br/>
-							<div class="hr"></div>
+							<div class="hr-inline"></div>
 							<span class="sub_header">FOR THE FUTURE</span>
 						</span>
 					</div>
@@ -93,7 +112,7 @@
 					<div class="box_header">
 						<span class="epidemia_header">
 							BULID YOUR PORTFOLIO<br/>
-							<div class="hr"></div>
+							<div class="hr-inline"></div>
 							<span class="sub_header">FOR THE FUTURE</span>
 						</span>
 					</div>
@@ -126,9 +145,9 @@
 		<div class="content">
 			<section class="stats">
 				<img src="gfx/stats_funded.png" />
-				<p style="margin-right:30px;">£620,234 <span class="light">raised</span></p>
+				<p class="stats-numbers" style="margin-right:30px;">£620,234 <span class="light">raised</span></p>
 				<img src="gfx/stats_investors.png" />
-				<p>45,654 <span class="light">registered investors</span></p>
+				<p class="stats-numbers">45,654 <span class="light">registered investors</span></p>
 				<div class="cl"></div>
 			</section>
 
@@ -196,10 +215,10 @@
 		</div>			
 
 		<div class="popular">
-			<div class="popular_nav right align_right" id="next">
+			<div class="popular_nav align_right" id="next">
 				>
 			</div>
-			<div class="popular_nav left align_left" id="prev">
+			<div class="popular_nav align_left" id="prev">
 				<
 			</div>
 			<div class="popular_wrapper">
@@ -647,132 +666,130 @@
 			<div class="cl"></div>
 		</div>
 
+		<footer>
+			<div class="footer-content">
+				<div class="row">
+					<div class="heading">
+						ABOUT<span class="light">US</span>
+					</div>
+					<ul>
+						<li><a>Awards</a></li>
+				        <li><a>Why Us? - Raising Finance</a></li>
+				        <li><a>Why Us? - Investing</a></li>
+				        <li><a>The BF Story</a></li>
+				       	<li><a>The BF Team</a></li>
+				        <li><a>BF Press Centre</a></li>
+				        <li><a>BF Jobs</a></li>
+			        </ul>
+				</div>
+				<div class="row">
+					<div class="heading">
+						HELP<span class="light"> & TRAINING</span>
+					</div>
+					<ul>
+						<li><a>Training Centre</a></li>
+				        <li><a>Raising Finance FAQ</a></li>
+				        <li><a>Investing FAQ</a></li>
+				        <li><a>7 Dumbest Mistakes</a></li>
+				        <li><a>CrowdFunding Pitch Tips</a></li>
+				        <li><a>CrowdInvesting Pitch Tips</a></li>
+				        <li><a>Contact Us</a></li>
+			        </ul>
+				</div>
+				<div class="row">
+					<div class="heading">
+						CROWD<span class="light">FUNDING</span>
+					</div>
+					<ul>
+					   <li><a>What is CrowdFunding?</a></li>
+				       <li><a>What Is CrowdInvesting?</a></li>
+				       <li><a>What is CrowdLending?</a></li>
+				       <li><a>Combined CrowdFunding</a></li>
+				       <li><a>Success Stories</a></li>
+			        </ul>
+				</div>
+				<div class="row">
+					<div class="heading">
+						HOW <span class="light">TO INVEST</span>
+					</div>
+					<ul>
+					   <li><a> Create Investor Account</a></li>
+				       <li><a>Search For Investments</a></li>
+				       <li><a>Manage Your Portfolio</a></li>
+				       <li><a>Get Updates</a></li>
+				       <li><a>Receive Returns</a></li>
+			        </ul>
+				</div>
+				<div class="row">
+					<div class="heading">
+						HOW <span class="light">TO RAISE FINANCE</span>
+					</div>
+					<ul>
+					   <li><a> Create An Account</a></li>
+				       <li><a>Apply To Pitch</a></li>
+				       <li><a> Plan Your Pitch</a></li>
+				       <li><a> Submit Your Pitch</a></li>
+				       <li><a> Promote Your Pitch</a></li>
+				       <li><a>Receive Your Funds</a></li>
+				       <li><a>Social Capital Score</a></li>
+				       <li><a>Membership Levels</a></li>
+				       <li><a> Our Investors</a></li>
+			        </ul>
+				</div>
 
+				<div class="row-right">
+					<div class="heading">
+						FIND <span class="light">US ON</span>
+					</div>
+					<a class="social_icon">
+						<div id="fb"></div>
+						<img src="gfx/social_f.png" />
+					</a>
+					<a class="social_icon">
+						<div id="li"></div>
+						<img src="gfx/social_l.png" />
+					</a>
+					<a class="social_icon">
+						<div id="tw"></div>
+						<img src="gfx/social_t.png" />
+					</a>
+					<a class="social_icon">
+						<div id="gp"></div>
+						<img src="gfx/social_g.png" />
+					</a>
+					<a class="social_icon">
+						<div id="yt"></div>
+						<img src="gfx/social_y.png" />
+					</a>
+					<br/>
+					<div class="heading">
+						READ <span class="light">OUR BLOG</span>
+					</div>
+					<div class="blog_entry">
+						7 dumb mistakes to avoid when approaching investors
+						<span class="micro"><br/><a href="">read more...</a></span>
+					</div>
+					
+				</div>
+
+				<div class="cl"></div>
+			</div>
+		</footer>
+		<section class="legal">
+			<img src="gfx/crowe.png" class="left" />
+			The public pages of banktothefuture.com constitute a financial promotion which has been approved for the purposes of Section 21 of the Financial Services and Markets Act 2000 by Crowe Clark Whitehill LLP, which is authorised and regulated by the Financial Services Authority.
+			<div class="hr"></div>
+			By clicking join now, connecting through Facebook, LinkedIn or Twitter or using BankToTheFuture.com, you are indicating you have read, understood, and agree to BankToTheFuture.com's Terms & Conditions, Risk Warnings and Privacy Policy. The website BankToTheFuture.com is a registered trademark owned by BnkToTheFuture.com Limited Incorporated and registered in England and Wales under the Companies Act 2006 with registered number 07903799. BankToTheFuture.com has received credit licenses from the Office of Fair Trading (No. 656956) and we are registered with the Office of the Information Commissioner (No. Z3239468) 
+			<div class="hr"></div>
+			<nav>
+				<a>Privacy & Cookies</a>   |   
+				<a>Terms & Conditions</a>    |   
+				<a>Risk Warnings</a>   |   
+				<a>Contact Us</a> 
+			</nav>
+			Copyright 2013 by BankToThefuture.com
+		</section>
 	</main>
 
 </body>
 </html>
-
-<script type="text/javascript">
-	$(".top-buttons").hover(function(){
-		$(this).children("img").stop(true,true).transition({
-		  rotate: "20deg"
-		});
-		$(this).children(".button-desc").stop(true,true).transition({
-		  x: "3px"
-		});
-	},function(){
-		$(this).children("img").stop(true,true).transition({
-		  rotate: "0deg"
-		});
-		$(this).children(".button-desc").stop(true,true).transition({
-		  x: "0px"
-		});
-	});
-
-	$(".group a").hover(function(){
-		$(this).stop(true,true).transition({
-		  x: "3px"
-		},200,"ease");
- 	},function(){
-		$(this).stop(true,true).transition({
-		  x: "0px"
-		},200,"ease");
-	});
-
-	$(".green_button").hover(function(){
-		$(this).stop(true,true).transition({
-		  scale: "1.08"
-		},400,"easeInOutBack");
- 	},function(){
-		$(this).stop(true,true).transition({
-		  scale: "1.0"
-		},100,"easeInOutBack");
-	});
-
-
-
-			/*POPULAR PITCHES
-			* author: Mazik
-			*/
-
-			//Function that show/hide navigation
-			function buttons(pageno){
-			if(pageno==1)
-			$("#prev").html("");
-			if(pageno>1)
-			$("#prev").html("<");
-			if(pageno==pages)
-			$("#next").html("");
-			if(pageno<pages)
-			$("#next").html(">");
-			if(pages<1){
-			$("#prev").html("");
-			$("#next").html("");
-			}
-			}
-
-			//Initials
-			var pages = 3;
-			var page = 1;
-
-			buttons(page);
-
-			//Events
-			$("#prev").click(function(){
-			if(page!=1 && pages>0){
-			$("#"+page--).slideUp();
-			$("#"+page).slideDown();
-			buttons(page);
-			}
-			});
-
-			$("#next").click(function(){
-			if(page!=pages && pages>0){
-			$("#"+page++).slideUp();
-			$("#"+page).slideDown();
-			buttons(page);
-			}
-			});
-
-
-	var rotator_counter = 1;
-	var rotator_max = 3;
-
-	$(document).ready(function(){
-		setInterval(
-			function(){
-				if(rotator_counter==rotator_max){
-					$("#rot"+rotator_counter).animate({
-					  opacity:"0"
-					},1000);
-					$("#rot"+rotator_counter+" .rotator_content").animate({
-					  opacity:"0",top:'-10px'
-					},300);
-					$("#rot1").animate({
-					  opacity:"1.0"
-					},500);
-					rotator_counter = 1;
-				}else{
-					$("#rot"+rotator_counter).animate({
-					  opacity:"0"
-					},1000);
-					$("#rot"+rotator_counter+" .rotator_content").animate({
-					  opacity:"0",top:'-10px'
-					},300);
-
-					$("#rot"+(rotator_counter+1)).animate({
-					  opacity:"1.0"
-					},500);
-					$("#rot"+(rotator_counter+1)+" .rotator_content").animate({
-					  opacity:"1.0",top:'0px'
-					},500);
-					rotator_counter++;
-				}
-			},8000
-		);
-
-		$(".epidemia_header").fitText(0.55, {maxFontSize: '77px' });
-		$(".sub_header").fitText(1.7, {maxFontSize: '22px' });
-	});
-</script>
