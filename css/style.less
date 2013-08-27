@@ -30,6 +30,14 @@
 	.box-sizing;
 }
 
+.transition(@speed: 0.5s){
+    -webkit-transition: @speed;
+    -moz-transition: @speed;
+    -o-transition: @speed;
+    -ms-transition: @speed;
+    transition: @speed;
+}
+
 @green: #78a315;
 @textgray: #878787;
 @purple: #590f56;
@@ -65,12 +73,26 @@ body{
 }
 
 a, a:visited{
+	.transition;
 	text-decoration: none;
 }
+/*a:hover {
+	color: darken(white,20);
+}*/
 
 header a, header a:visited{
+	.transition;
 	color: @textgray;
 }
+
+header a:hover{
+	color: @purple;
+}
+
+header a:active{
+	text-decoration: underline;
+}
+
 
 header{
 	position: fixed;
@@ -271,7 +293,7 @@ header nav .group a{
 	text-align: center;
 	height: 130px;
 	margin-top: -130px;
-	z-index: 120;
+	z-index: 6;
 }
 
 #finance .box_header{
@@ -330,6 +352,15 @@ header nav .group a{
 	color: #FFF;
 	font-size: 20px;
 	text-align: center;
+}
+
+.green_button:hover {
+	background-color: lighten(@green,8);
+}
+
+.green_button:active {
+	.transition(0s);
+	background-color: lighten(@green,15);
 }
 
 .box_content .green_button{

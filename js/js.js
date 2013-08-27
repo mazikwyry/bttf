@@ -109,6 +109,9 @@
 	var rotator_max = 3;
 
 	$(document).ready(function(){
+		$("#rot1 .rotator_content").animate({
+		  opacity:"1.0",top:'0px'
+		},500);
 		var oldScroll = $(window).scrollTop();
 		setInterval(
 			function(){
@@ -121,6 +124,9 @@
 					},300);
 					$("#rot1").animate({
 					  opacity:"1.0"
+					},500);
+					$("#rot1 .rotator_content").animate({
+					  opacity:"1.0",top:'0px'
 					},500);
 					rotator_counter = 1;
 				}else{
@@ -148,15 +154,15 @@
 
 		$(window).bind('scroll',function(e){ 
 		    var scrolled = $(window).scrollTop();
-		    if(scrolled>85){
-		    	if(oldScroll>scrolled){
-		    		$("header").slideDown(200);
-		    	}else{
-		    		$("header").slideUp(200);
-		    	}
-		    }else{
-		    	$("header").show();
-		    }
+		    // if(scrolled>85){
+		    // 	if(oldScroll>scrolled){
+		    // 		$("header").slideDown(200);
+		    // 	}else{
+		    // 		$("header").slideUp(200);
+		    // 	}
+		    // }else{
+		    // 	$("header").show();
+		    // }
 		    oldScroll = scrolled;
 		});
 	});
