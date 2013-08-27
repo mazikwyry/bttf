@@ -20,7 +20,6 @@
 
 
 </head>
-
 <body>
 
 	<header>
@@ -43,7 +42,7 @@
 				</div>
 			</a>
 			<div class="slicer"><img src="gfx/slicer.png" /></div>
-			<nav>
+			<nav class="pc-only">
 				<div class="group">
 					<a href="#">ABOUT US</a><br/>
 					<a href="#">HOW WE WORK?</a><br/>
@@ -97,32 +96,17 @@
 				<img src="gfx/rotator3_content.png" />
 			</div>
 		</div>
-		<div class="wrapper">
-			<div class="big_boxes">
-				<div class="big_box" id="portfolio">
-					<div class="box_header">
-						<span class="epidemia_header">
-							BULID YOUR PORTFOLIO<br/>
-							<div class="hr-inline"></div>
-							<span class="sub_header">FOR THE FUTURE</span>
-						</span>
-					</div>
-				</div>
-				<div class="big_box" id="finance">
-					<div class="box_header">
-						<span class="epidemia_header">
-							BULID YOUR PORTFOLIO<br/>
-							<div class="hr-inline"></div>
-							<span class="sub_header">FOR THE FUTURE</span>
-						</span>
-					</div>
-				</div>
-			</div>
-		</div>
 	</section>
 	<main>
 		<div class="big_boxes">
 			<div class="big_box" id="portfolio">
+					<div class="box_header">
+						<span class="epidemia_header">
+							BULID YOUR PORTFOLIO<br/>
+							<div class="hr-inline"></div>
+							<span class="sub_header">FOR THE FUTURE</span>
+						</span>
+					</div>
 				<div class="box_content">
 					Now people are investing small & large amounts in 'investment-ready' businesses & getting huge tax breaks through BankToTheFuture.com
 					<a href="#" class="green_button">SEARCH INVESTMENTS NOW</a>
@@ -132,6 +116,13 @@
 				</div>
 			</div>
 			<div class="big_box" id="finance">
+					<div class="box_header">
+						<span class="epidemia_header">
+							BULID YOUR PORTFOLIO<br/>
+							<div class="hr-inline"></div>
+							<span class="sub_header">FOR THE FUTURE</span>
+						</span>
+					</div>
 				<div class="box_content">
 					Now businesses are getting 'investment-ready' and raising finance from a crowd of investors on BankToTheFuture.com
 					<a href="#" class="green_button">APPLY TO PITCH NOW</a>
@@ -146,15 +137,17 @@
 			<section class="stats">
 				<img src="gfx/stats_funded.png" />
 				<p class="stats-numbers" style="margin-right:30px;">£620,234 <span class="light">raised</span></p>
-				<img src="gfx/stats_investors.png" />
-				<p class="stats-numbers">45,654 <span class="light">registered investors</span></p>
+				<div class="right">
+					<img src="gfx/stats_investors.png" />
+					<p class="stats-numbers">45,654 <span class="light">registered investors</span></p>
+				</div>
 				<div class="cl"></div>
 			</section>
 
 			<section class="join">
 				<div class="half-box left" style="padding-left:0;">
 					<h1 class="blue"><span>&nbsp;JOIN <span class="light">our investment club</span>&nbsp;</span></h1>
-					<div class="white-box" style="height:275px;">
+					<div class="white-box">
 						<p class="center">
 							Meet other investors and get FREE membership to our investment club here. Create your investor profile now for full details.
 							<div class="sixty-five-box left">
@@ -176,8 +169,8 @@
 							</div> 
 							<div class="thirty-five-box right">
 							<div class="section"><span>&nbsp;Use social account&nbsp;</span></div>
-							<a href="#" class="social-button-small facebook"><img src="gfx/facebook_icon.png" /><span>JOIN WITH FACEBOOK</span></a>
-							<a href="#" class="social-button-small linkedin"><img src="gfx/linkedin_icon.png" /><span>JOIN WITH LINKEDIN</span></a>
+							<a href="#" class="social-button-small facebook"><img src="gfx/facebook_icon.png" /><span>JOIN<div class="pc-and-mobile"> WITH FACEBOOK</div></span></a>
+							<a href="#" class="social-button-small linkedin"><img src="gfx/linkedin_icon.png" /><span>JOIN<div class="pc-and-mobile"> WITH LINKEDIN</div></span></a>
 								
 							<p class="center">
 								<span class="smaller">Already a member?</span><br>
@@ -191,14 +184,14 @@
 				</div>
 				<div class="half-box right" style="padding-right:0;">
 					<h1 class="purple"><span>&nbsp;<span class="light">SEE WHAT</span> YOUR FRIENDS <span class="light">INVEST IN</span>&nbsp;</span></h1>
-					<div class="white-box" style="height:275px;">
+					<div class="white-box">
 						<p class="center" style="margin-bottom:40px;">
 							Create your account with BankToTheFuture.com to find out what your friends and contacts are investing in.
 						</p>
 						<div class="sixty-box left" style="padding-left:20px;">
-							<a href="#" class="social-button facebook"><img src="gfx/facebook_icon.png" /><span>CONNECT WITH FACEBOOK</span></a>
+							<a href="#" class="social-button facebook"><img src="gfx/facebook_icon.png" /><span>CONNECT<div class="pc-and-mobile"> WITH FACEBOOK</div></span></a>
 							<div class="section" style="margin-top:8px;"><span>&nbsp;OR&nbsp;</span></div>
-							<a href="#" class="social-button linkedin"><img src="gfx/linkedin_icon.png" /><span>CONNECT WITH LINKEDIN</span></a>
+							<a href="#" class="social-button linkedin"><img src="gfx/linkedin_icon.png" /><span>CONNECT<div class="pc-and-mobile"> WITH LINKEDIN</div></span></a>
 						</div>
 						<div class="fourty-box right center">
 							<img src="gfx/friends.png" />
@@ -329,7 +322,7 @@
 								</div>
 						</div>
 					</div>
-					<div class="popular_pitch" >
+ 					<div class="popular_pitch pc-only" >
 						<div class="avatar">
 							<img src="gfx/avarat.png">
 							<a class="shares_badge_small" href="http://www.hmrc.gov.uk/eis/part1/1-2.htm" target="_blank">SEIS</a>
@@ -670,6 +663,34 @@
 			<div class="footer-content">
 				<div class="row">
 					<div class="heading">
+						HOW <span class="light">TO INVEST</span>
+					</div>
+					<ul>
+					   <li><a> Create Investor Account</a></li>
+				       <li><a>Search For Investments</a></li>
+				       <li><a>Manage Your Portfolio</a></li>
+				       <li><a>Get Updates</a></li>
+				       <li><a>Receive Returns</a></li>
+			        </ul>
+				</div>
+				<div class="row">
+					<div class="heading">
+						HOW <span class="light">TO RAISE FINANCE</span>
+					</div>
+					<ul>
+					   <li><a> Create An Account</a></li>
+				       <li><a>Apply To Pitch</a></li>
+				       <li><a> Plan Your Pitch</a></li>
+				       <li><a> Submit Your Pitch</a></li>
+				       <li><a> Promote Your Pitch</a></li>
+				       <li><a>Receive Your Funds</a></li>
+				       <li><a>Social Capital Score</a></li>
+				       <li><a>Membership Levels</a></li>
+				       <li><a> Our Investors</a></li>
+			        </ul>
+				</div>
+				<div class="row">
+					<div class="heading">
 						ABOUT<span class="light">US</span>
 					</div>
 					<ul>
@@ -708,67 +729,43 @@
 				       <li><a>Success Stories</a></li>
 			        </ul>
 				</div>
-				<div class="row">
-					<div class="heading">
-						HOW <span class="light">TO INVEST</span>
-					</div>
-					<ul>
-					   <li><a> Create Investor Account</a></li>
-				       <li><a>Search For Investments</a></li>
-				       <li><a>Manage Your Portfolio</a></li>
-				       <li><a>Get Updates</a></li>
-				       <li><a>Receive Returns</a></li>
-			        </ul>
-				</div>
-				<div class="row">
-					<div class="heading">
-						HOW <span class="light">TO RAISE FINANCE</span>
-					</div>
-					<ul>
-					   <li><a> Create An Account</a></li>
-				       <li><a>Apply To Pitch</a></li>
-				       <li><a> Plan Your Pitch</a></li>
-				       <li><a> Submit Your Pitch</a></li>
-				       <li><a> Promote Your Pitch</a></li>
-				       <li><a>Receive Your Funds</a></li>
-				       <li><a>Social Capital Score</a></li>
-				       <li><a>Membership Levels</a></li>
-				       <li><a> Our Investors</a></li>
-			        </ul>
-				</div>
 
-				<div class="row-right">
-					<div class="heading">
-						FIND <span class="light">US ON</span>
+				<div class="row-right footer-end">
+					<div class="higher">
+						<div class="heading">
+							FIND <span class="light">US ON</span>
+						</div>
+						<a class="social_icon">
+							<div id="fb"></div>
+							<img src="gfx/social_f.png" />
+						</a>
+						<a class="social_icon">
+							<div id="li"></div>
+							<img src="gfx/social_l.png" />
+						</a>
+						<a class="social_icon">
+							<div id="tw"></div>
+							<img src="gfx/social_t.png" />
+						</a>
+						<a class="social_icon">
+							<div id="gp"></div>
+							<img src="gfx/social_g.png" />
+						</a>
+						<a class="social_icon">
+							<div id="yt"></div>
+							<img src="gfx/social_y.png" />
+						</a>
 					</div>
-					<a class="social_icon">
-						<div id="fb"></div>
-						<img src="gfx/social_f.png" />
-					</a>
-					<a class="social_icon">
-						<div id="li"></div>
-						<img src="gfx/social_l.png" />
-					</a>
-					<a class="social_icon">
-						<div id="tw"></div>
-						<img src="gfx/social_t.png" />
-					</a>
-					<a class="social_icon">
-						<div id="gp"></div>
-						<img src="gfx/social_g.png" />
-					</a>
-					<a class="social_icon">
-						<div id="yt"></div>
-						<img src="gfx/social_y.png" />
-					</a>
-					<br/>
-					<div class="heading">
-						READ <span class="light">OUR BLOG</span>
+					<div class="lower">
+						<div class="heading">
+							READ <span class="light">OUR BLOG</span>
+						</div>
+						<div class="blog_entry">
+							7 dumb mistakes to avoid when approaching investors
+							<span class="micro"><br/><a href="">read more...</a></span>
+						</div>
 					</div>
-					<div class="blog_entry">
-						7 dumb mistakes to avoid when approaching investors
-						<span class="micro"><br/><a href="">read more...</a></span>
-					</div>
+
 					
 				</div>
 
