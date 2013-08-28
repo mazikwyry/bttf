@@ -71,6 +71,12 @@ body{
 	clear: both;
 	width: 100%;
 }
+.cll{
+	clear: left;
+}
+.clr{
+	clear: right;
+}
 
 a, a:visited{
 	.transition;
@@ -965,6 +971,11 @@ footer .blog_entry{
 .vertical-separator{margin: 10px 0;}
 
 
+.small-only {
+	display: none !important;
+}
+
+
 @media only screen and (max-width : 1020px) and (min-width: 700px)   {
 	.footer-end {
 		clear: both;
@@ -1007,6 +1018,13 @@ footer .blog_entry{
 	.pc-only, .popular_nav {
 		display: none !important;
 	}
+	.pc-and-mobile {
+		display: none !important;
+	}
+
+	.green_button, .green_button:visited{
+		font-size: 16px;
+	}
 	.popular_pitch{
 		width: 31%;
 	}
@@ -1020,16 +1038,6 @@ footer .blog_entry{
 
 	.half-box h1{
 		font-size: 18px;
-	}
-}
-
-@media only screen and (max-width : 880px) and (min-width: 700px)  {
-	.pc-and-mobile {
-		display: none !important;
-	}
-
-	.green_button, .green_button:visited{
-		font-size: 16px;
 	}
 }
 
@@ -1057,6 +1065,9 @@ footer .blog_entry{
 	.footer-end {
 		float: left !important;
 	}
+	.epidemia_header {
+		font-size: 40px;
+	}
 }
 
 
@@ -1067,11 +1078,52 @@ footer .blog_entry{
 }
 
 @media screen and (max-width: 580px){
+
+	.pc-and-tablet {
+		display: none !important;
+	}
+	.small-only {
+		display: block !important;
+	}
+	.rotator_content .small-only img {
+		width: 100%;
+		/*height: 270px;*/
+	}
+	.rotator {
+    margin-top: 123px;
+  }
+	.top-buttons {
+		padding-top: 10px;
+		margin-right: 20px;
+	}
 	footer .row, footer .row-right {
 		clear: both;
 	}
 	footer .row-right {
 		float: right !important;
+	}
+}
+
+
+@media screen and (max-width: 460px){
+	.white-box{
+		height:310px;
+	}
+	.popular_pitch {
+    width: 98%;
+	}
+	.popular_title {
+		font-size: 16px;
+	}
+	.popular_desc {
+		font-size: 14px;
+	}
+}
+
+
+@media screen and (max-width: 330px){
+	.box_header{
+		height: 95px;
 	}
 }
 

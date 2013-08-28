@@ -25,6 +25,29 @@
 	<header>
 		<div id="header-content">
 			<img class="logo" src="gfx/bttf_logo_r.png" />
+			<div class="auth">
+				<div class="login-trigger"><a href="#">SIGN IN</a>
+					<div class="login_box">
+						<input type="text" placeholder="E-MAIL"  style="margin-top:0;"/>
+						<input type="password" placeholder="PASSWORD" />
+
+						<input type="submit" value="LOGIN" class="right"/>
+						<div style="margin-top:10px; width:120px;">
+								<input type="checkbox" class="left" style="margin-top:0;" /> 
+								<label class="micro" style="top:0px;">Remember me</label>
+								<div class="cl"></div>
+								<a href="#" class="micro blue" style="position: relative; top:-13px; left:5px;">Forgot password?</a>
+						</div>
+						<div class="cl"></div>
+						<div class="section vertical-separator"><span>&nbsp;or use social account&nbsp;</span></div>
+						<a href="#" class="social-button-small facebook"><img src="gfx/facebook_icon.png" /><span style="font-size:11px;">LOGIN WITH FACEBOOK</span></a>
+						<a href="#" class="social-button-small linkedin"><img src="gfx/linkedin_icon.png" /><span style="font-size:11px;">LOGIN WITH LINKEDIN</span></a>
+					</div>
+				</div>
+				<img src="gfx/slicer_small.png" class="slicer_small no-float" />
+				<a class="green" href="#">JOIN US</a>
+			</div>
+			<div class="small-only cll"></div>
 			<div class="slicer"><img src="gfx/slicer.png" /></div>
 			<a href="#" class="top-buttons">
 				<img src="gfx/apply_to_pitch.png" />
@@ -56,28 +79,6 @@
 					<a href="#">EVENTS</a><br/>
 				</div>
 			</nav>
-			<div class="auth">
-				<div class="login-trigger"><a href="#">SIGN IN</a>
-					<div class="login_box">
-						<input type="text" placeholder="E-MAIL"  style="margin-top:0;"/>
-						<input type="password" placeholder="PASSWORD" />
-
-						<input type="submit" value="LOGIN" class="right"/>
-						<div style="margin-top:10px; width:120px;">
-								<input type="checkbox" class="left" style="margin-top:0;" /> 
-								<label class="micro" style="top:0px;">Remember me</label>
-								<div class="cl"></div>
-								<a href="#" class="micro blue" style="position: relative; top:-13px; left:5px;">Forgot password?</a>
-						</div>
-						<div class="cl"></div>
-						<div class="section vertical-separator"><span>&nbsp;or use social account&nbsp;</span></div>
-						<a href="#" class="social-button-small facebook"><img src="gfx/facebook_icon.png" /><span style="font-size:11px;">LOGIN WITH FACEBOOK</span></a>
-						<a href="#" class="social-button-small linkedin"><img src="gfx/linkedin_icon.png" /><span style="font-size:11px;">LOGIN WITH LINKEDIN</span></a>
-					</div>
-				</div>
-				<img src="gfx/slicer_small.png" class="slicer_small no-float" />
-				<a class="green" href="#">JOIN US</a>
-			</div>
 			<div class="cl"></div>
 		</div>
 		<div class="cl"></div>
@@ -85,7 +86,12 @@
 	<section class="rotator">
 		<div class="rotator_el" id="rot1" style="background-image:url('gfx/rotator3.jpg')">
 			<div class="rotator_content">
-				<img src="gfx/rotator3_content.png" />
+				<div class="pc-and-tablet">
+					<img src="gfx/rotator3_content.png" />
+				</div>
+				<div class="small-only">
+					<img src="gfx/rotator3_content-mobile.png" />
+				</div>
 			</div>
 		</div>
 
