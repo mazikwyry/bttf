@@ -1035,7 +1035,6 @@ footer .blog_entry{
 		font-size: 20px !important;
 		line-height: 2em;
 	}
-
 	.half-box h1{
 		font-size: 18px;
 	}
@@ -1048,8 +1047,14 @@ footer .blog_entry{
 	.big_box{
 		width:100%;
 	}
-	#finance .box_header{
+	.rotator {
+		height: 250px;
+	}
+	.box_header{
 		clear: both;
+		margin-top: 0px;
+	}
+	#finance .box_header{
 		margin-top: 30px;
 	}
 	.white-box{
@@ -1070,14 +1075,23 @@ footer .blog_entry{
 	}
 }
 
+/* 
+* Nie mam pojcia, czy ta druga linia cokolwiek zmienia,
+* bo nie mam na czym tego przetestowac.
+* W iPhone 5 jest retina. Ma 2x wieksza rozdzielczosc,
+* ale wszystko jest 2x powiekszone.
+* Pokombinuj :P
+*/
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px),
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 1200px){
 	.slicer {
 		display: none !important;
 	}
 }
 
-@media screen and (max-width: 580px){
+@media screen and (max-width: 580px),
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 1160px){
 
 	.pc-and-tablet {
 		display: none !important;
@@ -1091,6 +1105,7 @@ footer .blog_entry{
 	}
 	.rotator {
     margin-top: 123px;
+    margin-top: 73px;
   }
 	.top-buttons {
 		padding-top: 10px;
@@ -1105,7 +1120,8 @@ footer .blog_entry{
 }
 
 
-@media screen and (max-width: 460px){
+@media screen and (max-width: 460px),
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 920px){
 	.white-box{
 		height:310px;
 	}
@@ -1121,7 +1137,8 @@ footer .blog_entry{
 }
 
 
-@media screen and (max-width: 330px){
+@media screen and (max-width: 330px),
+(-webkit-min-device-pixel-ratio: 2) and (max-width: 660px){
 	.box_header{
 		height: 95px;
 	}
