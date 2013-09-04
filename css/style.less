@@ -619,14 +619,13 @@ label.micro{
 }
 
 
-main{
+.main{
 	background-color:#f1efef;
 	padding-bottom: 10px;
-	overflow: hidden;
 	margin-top: -130px;
 }
 
-main a, main a:visited{
+.popular a, .popular a:visited{
 	color: @blue;
 }
 
@@ -995,7 +994,8 @@ footer .blog_entry{
 }
 
 
-@media only screen and (max-width : 980px)   {
+@media only screen and (max-width : 980px),
+screen and (-webkit-min-device-pixel-ratio: 2) and (max-width : 1024px) {
 	.stats-numbers{
 		font-size: 28px !important;
 		line-height: 38px;
@@ -1006,8 +1006,7 @@ footer .blog_entry{
 }
 
 
-
-@media only screen and (max-width : 880px)   {
+@media only screen and (max-width : 880px) and (-webkit-max-device-pixel-ratio: 1.99){
 	body {
 		font-size: 14px;
 	}
@@ -1050,7 +1049,7 @@ footer .blog_entry{
 	}
 }
 
-@media only screen and (max-width : 820px)   {
+@media only screen and (max-width : 820px) and (-webkit-max-device-pixel-ratio: 1.99)   {
 	.footer-content .row {
 		margin-top: 10px;
 	}
@@ -1079,19 +1078,19 @@ footer .blog_entry{
 		height: 105px;
 	}
 
-	main{
+	.main{
 		margin-top: -105px;
 	}
 }
 
-@media screen and (max-width: 740px){
+@media screen and (max-width: 740px) and (-webkit-max-device-pixel-ratio: 1.99){
 	.stats-numbers{
 		font-size: 20px !important;
 		line-height: 35px;
 	}
 }
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) and (-webkit-max-device-pixel-ratio: 1.99){
 	.stats {
 		display: none !important;
 	}
@@ -1106,7 +1105,7 @@ footer .blog_entry{
 		height: 130px;
 		margin-top: 130px;
 	}
-	main{
+	.main{
 		margin-top: -130px;
 	}
 	.rotator{
@@ -1149,8 +1148,7 @@ footer .blog_entry{
 * Pokombinuj :P
 */
 
-@media screen and (max-width: 620px),
-(-webkit-min-device-pixel-ratio: 2) and (max-width: 1200px){
+@media screen and (max-width: 620px) and (-webkit-max-device-pixel-ratio: 1.99){
 	.slicer {
 		display: none !important;
 	}
@@ -1168,8 +1166,7 @@ footer .blog_entry{
 	}
 }
 
-@media screen and (max-width: 580px),
-(-webkit-min-device-pixel-ratio: 2) and (max-width: 1160px){
+@media screen and (max-width: 580px) and (-webkit-max-device-pixel-ratio: 1.99){
 
 	.pc-and-tablet {
 		display: none !important;
@@ -1205,8 +1202,7 @@ footer .blog_entry{
 }
 
 
-@media screen and (max-width: 460px),
-(-webkit-min-device-pixel-ratio: 2) and (max-width: 920px){
+@media screen and (max-width: 460px) and (-webkit-max-device-pixel-ratio: 1.99){
 	.white-box{
 		height:310px;
 	}
@@ -1243,8 +1239,7 @@ footer .blog_entry{
 }
 
 
-@media screen and (max-width: 330px),
-(-webkit-min-device-pixel-ratio: 2) and (max-width: 660px){
+@media screen and (max-width: 330px) and (-webkit-max-device-pixel-ratio: 1.99){
 	.box_header{
 		height: 95px;
 	}
